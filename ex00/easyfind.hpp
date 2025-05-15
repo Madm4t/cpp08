@@ -11,9 +11,9 @@ struct NotFoundException : std::exception {
 template<typename T>
 typename T::iterator easyfind(T& container, int num)
 {
-	auto it = std::find(containter.begin(), container.end(), num);
+	auto it = std::find(container.begin(), container.end(), num);
 	if (it == container.end())
-		throw std::runtime_error("easyfind: number not found inside the container");
+		throw NotFoundException();
 	return it;
 }
 
@@ -22,6 +22,6 @@ typename T::const_iterator easyfind(const T& container, int num)
 {
 	auto it = std::find(container.begin(), container.end(), num);
 	if (it == container.end())
-		throw std::runtime_error("easyfind: number not found inside the container");
+		throw NotFoundException();
 	return it;
 }
