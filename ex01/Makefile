@@ -1,8 +1,8 @@
-NAME		= find
+NAME		= span
 CPP			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++17
 
-SRCS		= main.cpp
+SRCS		= main.cpp Span.cpp
 OBJS		= $(SRCS:.cpp=.o)
 
 all: $(NAME)
